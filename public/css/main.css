@@ -1,0 +1,151 @@
+html, body {
+  height: 98%;
+}
+
+body {
+  background-color: rgb(24,40,40);
+  padding-top: 25px;       /* for header */
+  padding-bottom: 1px;    /* for footer */
+}
+
+.navbar-fixed-top {
+    min-height: 40px;
+    margin-bottom: 0;
+    border-radius: 0px;
+    font-size: 28px;
+    font-size-adjust: auto;
+}
+
+.navbar-fixed-top img {
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  transform: translateY(-20%);
+  position: absolute;
+  left: 6.5%;
+}
+
+#bs-example-navbar-collapse-1 {
+  margin-right: 6%;
+}
+
+
+/* full size home image */
+.index, .index .jumbotron {
+  height: 100%;
+}
+
+/* for responsive sizing*/
+.jumbotron {
+  background-image: url(images/blue-digital_abstract.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.container.main {
+  background-color: DarkSlateGray;
+  padding-bottom: 40px;
+}
+
+.container > h1 {
+  text-align: center;
+  margin-top: 20%;
+}
+
+.dashboard {
+  background-color: SlateGrey;
+}
+
+.well.profile {
+  margin-top: 15px;
+  background-color: Silver;
+}
+
+.dashboard.fixed-top {
+  margin-top: 15px;
+  background-color: SeaGreen;
+}
+
+
+.well.trend {
+  background-color: Silver;
+}
+
+.submit {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: DarkGoldenrod;
+}
+
+.content-1 {
+  display: flex;
+}
+
+.content-2 {
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+
+.content-2 > h3 {
+  margin-top: 0;
+}
+
+.content-1 > img, .dashboard > img {
+  width: 100px;
+  height: 100px;
+}
+
+.content-3 > h5 {
+  margin-top: 20px;
+}
+
+.content-3 > h3 {
+  margin-top: 10px;
+  margin-left: 5.5%;
+}
+
+.tweets-container .dashboard {
+  margin-top: 5%;
+  padding: 2%;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.tweets-container > .dashboard {
+  display: flex;
+}
+
+.tweets-container > .dashboard > .tweet {
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.trend {
+  margin-top: 0;
+  padding-left: 3%;
+}
+
+.navbar-fixed-bottom {
+  height: 14px;
+  transform: translateY(50%);
+  align-content: center;
+  justify-content: center;
+}
+
+#copyright {
+  font-size: 10px;
+  align-self: flex-end;
+
+  margin: 0px;
+  margin-left: 45px;
+}

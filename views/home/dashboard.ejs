@@ -1,0 +1,69 @@
+<%- include('../partials/header') %>
+<!--block for user profile -->
+<main class="container main">
+  <div class="row">
+    <div class="col-md-4 hidden-sm hidden-xs">
+      <div class="well profile">
+        <div class="content-1">
+          <img src="<%= faker.image.avatar() %>">
+          <div class="content-2">
+            <h3><%= faker.name.firstName() + ' ' + faker.name.lastName() %></h3>
+            <h5>@<%= faker.internet.userName() %></h5>
+          </div>
+        </div>
+        <div class="content-3">
+          <h5>Messages</h5>
+          <h3><%= Math.floor((Math.random() * 60) + 1); %></h3>
+        </div>
+      </div>
+    </div>
+
+    <!--block for form input -->
+    <div class="col-md-8 dashboard fixed-top">
+      <form id="tweet-form" action="/dashboard" method="post" >
+        <div>
+          <label for="username"></label>
+          <input type="text" class="form-control" placeholder="Username" name="username" value="<%= faker.name.firstName() + ' ' + faker.name.lastName() %>">
+        </div>
+        <div>
+          <label for="message"></label>
+          <textarea class="form-control" name="message" maxlength="255"><%= faker.hacker.phrase() %></textarea>
+        </div>
+        <br>
+        <div class="text-right submit">
+          <button class="btn btn-default" type="submit" name="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+  <!-- populate trending list with random data -->
+  <div class="row">
+    <div class="col-md-4 hidden-sm hidden-xs">
+      <h3 class="trend">Trending Tweets</h3>
+      <div class="well trend">
+        <% for(let i = 0; i < 6; i++) { %>
+          <h4>#<%= faker.hacker.phrase() %></h4>
+          <% } %>
+      </div>
+    </div>
+    <!-- this block displays non-empty tweet array with timestamp on each tweet-->
+    <% if (typeof tweets !== 'undefined') { %>
+      <div class="col-md-8 tweets-container">
+          <% for(let i = 0; i < tweets.length; i++) { %>
+            <div class="dashboard">
+            <img src="<%= faker.image.avatar() %>">
+            <div class="tweet">
+              <h5><%= tweets[i].name %></h5>
+              <p><%= tweets[i].body %></p>
+              <p style="text-align: right; padding-right: 0;">Posted: <%= new Date() %></p>
+            </div>
+          </div>
+          <% } %>
+      </div>
+    <% } %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
